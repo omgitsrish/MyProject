@@ -51,18 +51,18 @@
 		%>
 		<tr>		
 			<!--<td> <a href="Controller?id=<%=e.getEmpid()%>">View</a></td> -->
-			<td><a id="link" onclick="view(<%=e.getEmpid()%>)">View</a>
+			<td><a id="<%out.print(e.getEmpid());%>" onclick="view(this.id)">View</a>
 			<td id="<%=e.getEmpid()%>"><%=e.getEmpid()%></td>
 			<td><%=e.getEname()%></td>
 			<td><%=e.getDesignation()%></td>
 			<td><%=e.getContact_no()%></td>
-			<td>Financial Year: <select name="fyear" id="fyear">
+			<td id="year<%out.print(e.getEmpid());%>">Financial Year: <select name="fyear" id="fyear">
 					<option>2016-17</option>
 					<option>2017-18</option>
 					<option>2018-19</option>
 
 			</select></td>
-			<td>Month: <select name="month" id="month">
+			<td id="month<%out.print(e.getEmpid());%>">Month: <select name="month" id="month">
 					<option>Jan</option>
 					<option>Feb</option>
 					<option>Mar</option>
