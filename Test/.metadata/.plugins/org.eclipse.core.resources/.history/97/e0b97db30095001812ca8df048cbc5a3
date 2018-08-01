@@ -1,0 +1,12 @@
+package com.dao;
+
+import com.bean.Salary;
+
+public class DAO {
+
+	public boolean addSalary(Salary s) {
+		
+		return false;
+	}
+
+}

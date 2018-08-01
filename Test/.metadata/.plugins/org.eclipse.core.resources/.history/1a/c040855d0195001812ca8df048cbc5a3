@@ -1,0 +1,19 @@
+package com.dao;
+
+import java.sql.PreparedStatement;
+
+import Util.DButil;
+
+import com.bean.Salary;
+
+public class DAO {
+	Connection con = DButil.getConnection();
+	
+	public boolean addSalary(Salary s) {
+		PreparedStatement ps = 
+		
+		
+		return false;
+	}
+
+}

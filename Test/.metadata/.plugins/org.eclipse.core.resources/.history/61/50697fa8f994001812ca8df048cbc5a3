@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="Controller" method="get">
+	<table border="2" cellspacing="10" cellpadding="10">
+		<th>Add Salary Details</th>
+		<tr>
+			<td> Employee id: <input type="number" name="empid" /> <br><br>
+				Financial Year: 
+				<select name="fyear" >
+					<option>2016-17</option>
+					<option>2017-18</option>
+					<option>2018-19</option>
+				</select>
+				Month:
+				<select name="fyear" >
+					<option>Jan</option>
+					<option>Feb</option>
+					<option>Mar</option>
+				</select>
+		</tr>
+	</table>
+</form>
+
+</body>
+</html>

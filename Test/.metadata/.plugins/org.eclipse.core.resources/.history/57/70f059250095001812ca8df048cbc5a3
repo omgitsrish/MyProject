@@ -1,0 +1,33 @@
+package com.Controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.bean.Salary;
+import com.dao.DAO;
+
+public class Controller extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	DAO d  = new DAO();
+	
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		doPost(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		String action  = request.getParameter("action");
+		if(action.equals("addSal")){
+		Salary s  = new Salary(Integer.parseInt(request.getParameter("empid")),request.getParameter("month") ,request.getParameter("fyear"), Integer.parseInt(request.getParameter("basic")),Integer.parseInt(request.getParameter("performance")),Integer.parseInt(request.getParameter("income")),Integer.parseInt(request.getParameter("food")));		
+		
+		}
+		
+	}
+
+}

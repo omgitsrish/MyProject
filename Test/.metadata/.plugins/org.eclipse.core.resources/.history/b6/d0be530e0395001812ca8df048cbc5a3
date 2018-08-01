@@ -1,0 +1,40 @@
+package com.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import Util.DButil;
+
+import com.bean.Salary;
+
+public class DAO {
+	Connection con = DButil.getConnection();
+	
+	@SuppressWarnings("finally")
+	public boolean addSalary(Salary s) {
+		try {
+			PreparedStatement ps = con.prepareStatement("insert into salary values(?,?,?,?,?,?,?,?)");
+			ps.setInt(1, s.getEmpid());
+			ps.setString(2, s.getMonth());
+			ps.setString(3, s.getFinancial_year());
+			ps.setInt(4, s.getBasic_pay());
+			ps.setInt(5, s.getPerformance_pay());
+			ps.setInt(6, s.getIncome_tax());
+			ps.setInt(7, s.getFood_coupon());
+			ps.setInt(8, s.getTotal_salary());
+			ps.executeUpdate();
+			return true;
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally{
+			DButil.closeConnection();
+			return false;	
+		}
+	}
+
+}

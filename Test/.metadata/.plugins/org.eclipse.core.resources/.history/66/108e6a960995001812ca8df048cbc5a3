@@ -1,0 +1,13 @@
+package com.service;
+
+import com.bean.Salary;
+import com.dao.DAO;
+
+public class Service {
+	DAO d  =new DAO();
+	public boolean addSalary(Salary s) {
+		
+		return d.addSalary(s);
+	}
+
+}
